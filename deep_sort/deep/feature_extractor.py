@@ -4,10 +4,10 @@ import numpy as np
 import cv2
 import logging
 
+from ultralytics.cfg import get_cfg
+
 from .model import Net
-from fastreid.config import get_cfg
-from fastreid.engine import DefaultTrainer
-from fastreid.utils.checkpoint import Checkpointer
+
 
 class Extractor(object):
     def __init__(self, model_path, use_cuda=True):
